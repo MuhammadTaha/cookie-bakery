@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.building{
+
+  margin-bottom: 5%;
+
+}
+.roof {
+  width: 0; 
+  height: 0; 
+  border-left: 500px solid transparent;
+  border-right: 500px solid transparent;
+  
+  border-bottom: 500px solid #dd7e6b;
+}
+
+.displayName {
+  height: 100px;
+  width: 430px;
+  margin-left: 300px;
+  background-color: #93c47d;
+  border: 5px solid #6aa84f;
+  position: absolute;
+  margin-top: 450px;
+}
+.displayName label{
+  font-size: 44px;
+    font-weight: bold;
+    margin-left: 16%;
+    color: #2a5115;
+    margin-top: 2%;
+}
+
+.wall {
+  margin-left: 0% !important;
+  height: 500px;
+  width: 1000px;
+  background-color: #cccccc;
+}
+.mailbox {
+  margin-top: 25%;
+  margin-left: 30%;
+  height: 110px;
+  width: 150px;
+  background-color: #999999;
+  transition:all 0.1s linear;
+
+}
+
+.mailboxDrop{
+  margin-top: 40%;
+}
+
+.mailboxHole {
+  margin-top: 10%;
+  margin-left: 10%;
+  height: 20px;
+  width: 120px;
+  background-color: #666;
+}
+.mailboxLabel{
+  margin-left: 30%;
+  margin-top: 5%;
+  font-size: 20px;
+}
+.door {
+  height: 300px;
+  width: 200px;
+  margin-left: 25%;
+  background-color: #f4b26a;
+  position: absolute;
+  margin-top: 60%;
+}
+
+.doorHandle{
+
+  height: 5px;
+  width: 30px;
+  margin-left: 5%;
+  background-color: #b45e06;
+  position: absolute;
+  margin-top: 75%;
+
+}
+
+.window {
+  margin-top: 25%;
+  margin-left: 25%;
+  height: 180px;
+  width: 180px;
+  background-color: #cfe2f3;
+  border-radius: 50%;
+  border: 6px solid #9ec5e8;
+  background-size: 100% !important;
+
+}
+
+.window:hover{
+  background-color: transparent;
+  background: url('images/cookie.jpg') center center no-repeat;
+}
+
+.sun {
+  float:right;
+  height: 200px;
+  width: 200px;
+  background-color: #faee07;
+  border-radius: 50%;
+}
