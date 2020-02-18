@@ -4,12 +4,30 @@ import  MailBox from "./mailbox";
 
 
 class Bakery extends Component {
+
+    constructor(props){
+        super(props);
+        this.changeMode = this.changeMode.bind(this);
+        this.state = {
+            isNightMode: false
+        }
+    }
+
+    changeMode(){
+
+        this.setState(prevState=>({
+            isNightMode: !prevState.isNightMode
+        }));
+    }
+
     render() { 
+        this.state.isNightMode ? document.body.classList.add('darkMode') :  document.body.classList.remove('darkMode');
+
         return ( 
         <div className="building">
             <Row>
                 <Col md={{ size: 'auto', offset: 9}}>
-                <div className="sun" ></div>
+                    <div className={this.state.isNightMode? "sun dark": "sun"} onClick={this.changeMode}></div>
                 </Col>
             </Row>
             <Row>
@@ -19,7 +37,7 @@ class Bakery extends Component {
                 </div>
                 <Row className="wall">
                     <Col>
-                        <div className="window"></div>
+                        <div  className={this.state.isNightMode?"window noHover":"window"}></div>
                     </Col>
                     <Col>
                         <div className="door">
@@ -27,14 +45,12 @@ class Bakery extends Component {
                         </div>
                     </Col>
                     <Col>
-                        <Row><div className="window"></div></Row>
+                        <Row><div className={this.state.isNightMode?"window noHover":"window"}></div></Row>
                         <Row> 
                             <MailBox></MailBox>
                         </Row>
 
                     </Col>
-                    {/* <div className="window" id="window1"></div>
-                    <div className="window" id="window2"></div> */}
                 </Row>
             </Row>
         </div> );

@@ -138,10 +138,22 @@
   background: url('images/cookie.jpg') center center no-repeat;
 }
 
+.window.noHover{
+  pointer-events: none !important;
+}
+
 .sun {
   float:right;
   height: 200px;
   width: 200px;
   background-color: #faee07;
   border-radius: 50%;
+}
+
+.sun.dark{
+  background-color: #fff;
+}
+
+.darkMode {
+  background-color: black;
 }
